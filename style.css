@@ -1,0 +1,269 @@
+:root {
+  --color-primary: #166ecd;
+  --color-onPrimary: #f5fcff;
+  --color-secondary: #a095ff;
+  --color-onSurface: #000000;
+  --color-onSurfaceAlt: #474747;
+  --color-surface: #fafafa;
+  --color-surface1: #e2e8f0;
+  --color-separator: #d2d2d2;
+  --color-shadow: #000000;
+  --border-radius: 8px;
+  font-family: "Roboto", sans-serif;
+  color: var(--color-onSurfaceAlt);
+  --shadow: 0px 2px 4px rgba(0, 0, 0, 0.161);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.text-bold {
+  font-weight: 700;
+  color: var(--color-onSurface);
+}
+
+.heading-1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-onSurface);
+}
+
+.heading-2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-onSurface);
+}
+
+.heading-3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-onSurface);
+}
+
+.heading-4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-onSurface);
+}
+
+.text-small {
+  font-size: 0.8rem;
+}
+
+.text-normal {
+  font-size: 1rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  /* grid-template-columns: 5fr 1fr; */
+  background-color: var(--color-surface1);
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  box-shadow: inset var(--shadow);
+}
+
+.header {
+  /* grid-column: 2/3; */
+  display: flex;
+  flex-direction: column;
+  /* grid-template-rows: 1fr 2fr; */
+  /* grid-template-columns: 5fr 2fr; */
+  padding: 10px 50px;
+  gap: 20px;
+  background-color: var(--color-surface);
+}
+
+.header-top,
+.header-bottom {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.header .search,
+.header .current-user-banner,
+.header .user-profile,
+.header .user-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header .current-user-banner,
+.header .search {
+  flex: 1;
+}
+
+.header .user-profile,
+.header .user-actions {
+  justify-content: end;
+}
+
+.header .user-actions button {
+  border-radius: 50px;
+  background-color: var(--color-primary);
+  border: 0;
+  padding: 5px 30px;
+  color: var(--color-onPrimary);
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-section > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header a,
+.sidebar a,
+.project-actions a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-actions {
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+/* .header > * {
+  outline: 1px solid blue;
+  padding: 2px;
+} */
+
+.sidebar {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 20px;
+  background-color: var(--color-primary);
+  color: var(--color-onPrimary);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: start;
+  gap: 35px;
+}
+
+.brand-area {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-area .title {
+  color: var(--color-onPrimary);
+}
+
+.user-pic-big {
+  height: 50px;
+  width: 50px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+}
+
+.logo > * {
+  /* transform: scale(150%); */
+  margin-top: 5px;
+}
+
+.user-pic-medium {
+  height: 35px;
+  width: 35px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+}
+
+/* .content > * {
+  outline: 1px solid red;
+} */
+
+.left-content {
+  /* border: 1px solid salmon; */
+  flex: 6;
+}
+
+.right-content {
+  /* border: 1px solid fuchsia; */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-content: start;
+  flex: 0 1 250px;
+  /* min-width: 20px; */
+}
+
+.announcements-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--color-surface);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.161);
+  border-radius: var(--border-radius);
+  padding: 20px;
+}
+
+.project-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary) 6px,
+    var(--color-surface) 6px
+  );
+  grid-template-rows: auto 4fr auto;
+}
+
+.grid-title {
+  margin-bottom: 8px;
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-separator);
+}
+
+.trending-project {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar {
+  background-color: var(--color-surface1);
+  width: 80%;
+  border: 0;
+  border-radius: 50px;
+  height: 30px;
+}
+
+/* .card > * {
+  outline: 1px solid green;
+} */
